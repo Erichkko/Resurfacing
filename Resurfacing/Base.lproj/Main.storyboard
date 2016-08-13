@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BJw-2z-ImM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_heart" id="RjV-aj-Xru">
+                                <rect key="frame" x="100" y="189" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_face" id="sti-n6-EEF">
+                                <rect key="frame" x="100" y="60" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_rect" id="AJp-Fh-31A">
+                                <rect key="frame" x="100" y="325" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x4u-Bu-Uza">
+                                <rect key="frame" x="18" y="510" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="redColor"/>
+                                <connections>
+                                    <action selector="redSkin" destination="BYZ-38-t0r" eventType="touchUpInside" id="59y-mQ-Ap4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4rp-I0-zC1">
+                                <rect key="frame" x="122" y="510" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="blueColor"/>
+                                <connections>
+                                    <action selector="blueSkin" destination="BYZ-38-t0r" eventType="touchUpInside" id="yLX-jT-pLa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XXg-iu-GPw">
+                                <rect key="frame" x="226" y="510" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="greenColor"/>
+                                <connections>
+                                    <action selector="greenSkin" destination="BYZ-38-t0r" eventType="touchUpInside" id="i4G-wm-KVN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vye-sk-0VS">
+                        <barButtonItem key="rightBarButtonItem" title="twoVc" id="Xy0-9c-4sc">
+                            <connections>
+                                <segue destination="2cz-Ix-zMP" kind="push" id="KNl-2F-acM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="faceImageView" destination="sti-n6-EEF" id="S12-b0-h1O"/>
+                        <outlet property="heartImageView" destination="RjV-aj-Xru" id="tlH-ji-1hm"/>
+                        <outlet property="rectImageView" destination="AJp-Fh-31A" id="NK1-L9-WcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="324"/>
+        </scene>
+        <!--Two View Controller-->
+        <scene sceneID="5ds-Qb-d02">
+            <objects>
+                <viewController id="2cz-Ix-zMP" customClass="TwoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CBE-lx-WaL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_face" id="Wn3-1X-hFy">
+                                <rect key="frame" x="96" y="73" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_rect" id="GbZ-V5-Btp">
+                                <rect key="frame" x="96" y="337" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_heart" id="AkQ-Mw-7kt">
+                                <rect key="frame" x="100" y="201" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N64-UT-L6b"/>
+                    <connections>
+                        <outlet property="faceImageView" destination="Wn3-1X-hFy" id="PSF-hz-ed1"/>
+                        <outlet property="heartImageView" destination="AkQ-Mw-7kt" id="eUA-Rz-Hft"/>
+                        <outlet property="rectImageView" destination="GbZ-V5-Btp" id="AAK-JM-Fah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6k-Ch-KEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="372"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zgt-7g-WGa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BJw-2z-ImM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rlg-rf-8GA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VcO-Uc-apK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="biW-Xp-6MK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69" y="394"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="blue_face" width="200" height="200"/>
+        <image name="blue_heart" width="199" height="196"/>
+        <image name="blue_rect" width="200" height="200"/>
+    </resources>
+</document>
