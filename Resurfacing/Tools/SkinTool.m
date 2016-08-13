@@ -10,17 +10,27 @@
 
 @implementation SkinTool
 
-static NSString *_skinTheme = @"red";
 
 + (void)setSkinTheme:(NSString *)skinTheme
 {
-    _skinTheme = skinTheme;
+    //将设置好的皮肤 保存到 沙盒中
+    [[NSUserDefaults standardUserDefaults] setObject:skinTheme forKey:@"skinTheme"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
++ (NSString *)getSkinTheme
+{
+    //取出上次保存的皮肤
+    NSString *skinTheme =  [[NSUserDefaults standardUserDefaults] objectForKey:@"skinTheme"];
+    if (skinTheme == nil) {
+        skinTheme = @"red";
+    }
+    return skinTheme;
 }
 
 + (UIImage *)skinWithImageName:(NSString *)skinName
 {
-    NSString *imagePath = [NSString stringWithFormat:@"skin/%@/%@",_skinTheme,skinName];
+    NSString *imagePath = [NSString stringWithFormat:@"skin/%@/%@",[self getSkinTheme],skinName];
     return [UIImage imageNamed:imagePath];
     
 }

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "SkinTool.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *faceImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *heartImageView;
@@ -15,20 +15,28 @@
 
 @end
 
+
+#warning  换皮肤的 设置最好不要写在 viewDidLoad 方法中
+#warning  最好写在 viewWillAppear方法中
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //取出上次保存的皮肤
-   NSString *skinName =  [[NSUserDefaults standardUserDefaults] objectForKey:@"skinName"];
-    if (skinName == nil) {
-        skinName = @"red";
-    }
-    [self showSkinWith:skinName];
+   }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.faceImageView.image = [SkinTool skinWithImageName:@"face"];
+    self.heartImageView.image = [SkinTool skinWithImageName:@"heart"];
+    self.rectImageView.image = [SkinTool skinWithImageName:@"rect"];
+
 }
 - (IBAction)redSkin {
     [self showSkinWith:@"red"];
+    
+   
 }
 - (IBAction)blueSkin {
     [self showSkinWith:@"blue"];
@@ -40,18 +48,9 @@
 
 - (void)showSkinWith:(NSString *)skinName
 {
-    NSString *faceName = [NSString stringWithFormat:@"skin/%@/face",skinName];
-    NSString *heartName = [NSString stringWithFormat:@"skin/%@/heart",skinName];
-    NSString *rectName = [NSString stringWithFormat:@"skin/%@/rect",skinName];
-    
-    self.faceImageView.image = [UIImage imageNamed:faceName];
-    self.heartImageView.image = [UIImage imageNamed:heartName];
-    self.rectImageView.image = [UIImage imageNamed:rectName];
-    
-    //将设置好的皮肤 保存到 沙盒中
-    [[NSUserDefaults standardUserDefaults] setObject:skinName forKey:@"skinName"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    
+    [SkinTool setSkinTheme:skinName];
+    self.faceImageView.image = [SkinTool skinWithImageName:@"face"];
+    self.heartImageView.image = [SkinTool skinWithImageName:@"heart"];
+    self.rectImageView.image = [SkinTool skinWithImageName:@"rect"];
 }
 @end

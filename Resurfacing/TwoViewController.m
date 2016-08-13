@@ -7,7 +7,7 @@
 //
 
 #import "TwoViewController.h"
-
+#import "SkinTool.h"
 @interface TwoViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *faceImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *heartImageView;
@@ -20,23 +20,9 @@
     [super viewDidLoad];
     
     
-    //取出上次保存的皮肤
-    NSString *skinName =  [[NSUserDefaults standardUserDefaults] objectForKey:@"skinName"];
-    if (skinName == nil) {
-        skinName = @"red";
-    }
-    [self showSkinWith:skinName];
-}
-- (void)showSkinWith:(NSString *)skinName
-{
-    NSString *faceName = [NSString stringWithFormat:@"skin/%@/face",skinName];
-    NSString *heartName = [NSString stringWithFormat:@"skin/%@/heart",skinName];
-    NSString *rectName = [NSString stringWithFormat:@"skin/%@/rect",skinName];
-    
-    self.faceImageView.image = [UIImage imageNamed:faceName];
-    self.heartImageView.image = [UIImage imageNamed:heartName];
-    self.rectImageView.image = [UIImage imageNamed:rectName];
-    
+    self.faceImageView.image = [SkinTool skinWithImageName:@"face"];
+    self.heartImageView.image = [SkinTool skinWithImageName:@"heart"];
+    self.rectImageView.image = [SkinTool skinWithImageName:@"rect"];
     
 }
 @end
