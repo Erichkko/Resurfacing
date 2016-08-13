@@ -27,11 +27,31 @@
     }
     return skinTheme;
 }
-
+//获取当前主题下的 图片
 + (UIImage *)skinWithImageName:(NSString *)skinName
 {
     NSString *imagePath = [NSString stringWithFormat:@"skin/%@/%@",[self getSkinTheme],skinName];
     return [UIImage imageNamed:imagePath];
+    
+}
+
+//或得 当前主题下的 Label的背景颜色
+
++ (UIColor *)skinWithColor
+{
+    NSString *labelThemePath = [NSString stringWithFormat:@"skin/%@/LabelTheme.plist",[self getSkinTheme]];
+    NSString *abelThemePlist = [[NSBundle mainBundle] pathForResource:labelThemePath ofType:nil];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:abelThemePlist];
+    
+    NSString *bgColorValue = dict[@"bgColor"];
+    
+    NSArray *array = [bgColorValue componentsSeparatedByString:@"."];
+    
+    NSInteger red = [array[0] integerValue];
+    NSInteger green = [array[1] integerValue];
+    NSInteger blue = [array[2] integerValue];
+    UIColor *color = [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:1.0];
+    return color;
     
 }
 @end

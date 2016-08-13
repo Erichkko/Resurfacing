@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9155372ECF21B2C7EBCF9C04DCFDBE2FE996EAC5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9155372ECF21B2C7EBCF9C04DCFDBE2FE996EAC5" : 0,
+    "65D6DB69FC84550EA0B40BE6508B97475483A876" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2E4476A4-CE5E-4054-B0BE-B33CA21D381C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9155372ECF21B2C7EBCF9C04DCFDBE2FE996EAC5" : "Resurfacing\/",
+    "65D6DB69FC84550EA0B40BE6508B97475483A876" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Resurfacing",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Resurfacing.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Erichkko\/PinterestLayout.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "65D6DB69FC84550EA0B40BE6508B97475483A876"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Erichkko\/Resurfacing.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9155372ECF21B2C7EBCF9C04DCFDBE2FE996EAC5"
+    }
+  ]
+}

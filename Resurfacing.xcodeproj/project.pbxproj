@@ -16,6 +16,7 @@
 		FEB2EF0B1D5EF62A0043BD3E /* skin in Resources */ = {isa = PBXBuildFile; fileRef = FEB2EF0A1D5EF62A0043BD3E /* skin */; };
 		FEB2EF0E1D5EF88A0043BD3E /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB2EF0D1D5EF88A0043BD3E /* TwoViewController.m */; };
 		FEB2EF151D5EFBBC0043BD3E /* SkinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB2EF141D5EFBBC0043BD3E /* SkinTool.m */; };
+		FEB2EF171D5F077A0043BD3E /* LabelTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEB2EF161D5F077A0043BD3E /* LabelTheme.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FEB2EF0D1D5EF88A0043BD3E /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 		FEB2EF131D5EFBBC0043BD3E /* SkinTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkinTool.h; sourceTree = "<group>"; };
 		FEB2EF141D5EFBBC0043BD3E /* SkinTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkinTool.m; sourceTree = "<group>"; };
+		FEB2EF161D5F077A0043BD3E /* LabelTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LabelTheme.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				FEB2EF0A1D5EF62A0043BD3E /* skin */,
 				FEB2EEF41D5EF0950043BD3E /* main.m */,
+				FEB2EF161D5F077A0043BD3E /* LabelTheme.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEB2EF031D5EF0950043BD3E /* LaunchScreen.storyboard in Resources */,
+				FEB2EF171D5F077A0043BD3E /* LabelTheme.plist in Resources */,
 				FEB2EF0B1D5EF62A0043BD3E /* skin in Resources */,
 				FEB2EF001D5EF0950043BD3E /* Assets.xcassets in Resources */,
 				FEB2EEFE1D5EF0950043BD3E /* Main.storyboard in Resources */,

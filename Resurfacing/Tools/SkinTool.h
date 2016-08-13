@@ -12,4 +12,5 @@
 
 + (void)setSkinTheme:(NSString *)skinTheme;
 + (UIImage *)skinWithImageName:(NSString *)skinName;
++ (UIColor *)skinWithColor;
 @end
